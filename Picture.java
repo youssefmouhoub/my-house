@@ -49,14 +49,6 @@ public class Picture
         roof.moveVertical(-60);
         roof.makeVisible();
         
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(120);
-        sun.changeSize(80);
-        sun.makeVisible();
-        sun.slowMoveVertical(-250);
-        
         field = new Square();
         field.changeColor("green");
         field.moveHorizontal(-320);
@@ -64,6 +56,13 @@ public class Picture
         field.changeSize(3000);
         field.makeVisible();
         
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(120);
+        sun.changeSize(80);
+        sun.makeVisible();
+        sun.slowMoveVertical(-250);
         
     }
 
@@ -94,4 +93,14 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+    
+    
+    public void atardecer()
+    {
+        if (wall != null)
+        {
+            sun.slowMoveVertical(250);
+        }
+    }
+    
 }
